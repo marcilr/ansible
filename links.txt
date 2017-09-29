@@ -1,0 +1,50 @@
+links.txt
+Created Thu May 26 16:15:32 AKDT 2016
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Ansible related links
+
+
+Links
+=====
+About Modules
+http://docs.ansible.com/ansible/modules.html
+
+Ad-Hoc Commands
+Introduction To Ad-Hoc Commands
+http://docs.ansible.com/ansible/intro_adhoc.html
+
+command - Executes a command on a remote node
+http://docs.ansible.com/ansible/command_module.html
+
+debug - Print statements during execution
+http://docs.ansible.com/ansible/debug_module.html
+
+Getting Started
+http://docs.ansible.com/ansible/intro_getting_started.html
+
+Error Handling In Playbooks
+http://docs.ansible.com/ansible/playbooks_error_handling.html
+
+Example Playbooks
+https://github.com/ansible/ansible-examples
+
+Introduction
+http://docs.ansible.com/ansible/intro.html
+
+Installation
+http://docs.ansible.com/ansible/intro_installation.html
+
+Loops
+http://docs.ansible.com/ansible/playbooks_loops.html
+
+Overview
+https://www.ansible.com/how-ansible-works
+
+Playbooks
+http://docs.ansible.com/ansible/playbooks.html
+
+Variables
+http://docs.ansible.com/ansible/playbooks_variables.html
+
