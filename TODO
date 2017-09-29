@@ -1,0 +1,63 @@
+TODO
+Created Fri May 27 08:23:51 AKDT 2016
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+
+Complete
+========
+x Fri May 27 09:30:16 AKDT 2016 - Configured /etc/ansible/hosts with
+custom ports prepeneded for non port-22 use:
+
+/etc/ansible/hosts:
+bornite:***
+malachite:***
+htpc:***
+
+Fri May 27 08:23:51 AKDT 2016 - SSL key configuration for ansible?
+Create /etc/ansible/hosts file:
+
+/etc/ansible/hosts
+malachite
+
+Now ping all your nodes:
+$ ansible all -m ping
+
+malachite | FAILED => SSH encountered an unknown error during the connection.
+We recommend you re-run the command using -vvvv, which will enable SSH
+debugging output to help diagnose the issue
+$
+
+Suspect this failed since I don't think the firewall passes ping.
+
+$ ansible all -a "/bin/echo hello"
+malachite | FAILED => SSH encountered an unknown error during the connection.
+We recommend you re-run the command using -vvvv, which will enable SSH
+debugging output to help diagnose the issue
+$
+
+
+Added correct port to /etc/ansible/hosts did the trick:
+  bornite:***
+  malachite:***
+  htpc:***
+
+
+$ ansible all -a "/bin/echo hello"
+malachite | success | rc=0 >>
+hello
+
+htpc | success | rc=0 >>
+hello
+
+bornite | success | rc=0 >>
+hello
+
+$ 
+
+
+Links
+=====
+Getting Started
+Has /etc/ansible/hosts details
+http://docs.ansible.com/ansible/intro_getting_started.html
